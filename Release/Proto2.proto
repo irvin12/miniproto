@@ -1,0 +1,136 @@
+import "Proto1.proto";
+
+package common.proto2;
+
+enum EnumTest
+{
+	EnumTest_1 = 0x0001;
+	EnumTest_2 = 0x0002 + EnumTest_1;
+	EnumTest_3 = 0x0003 + common.proto1.EnumTest.EnumTest_5;
+}
+
+message MsgTestArray
+{
+	repeated bool						m_bool = 1		[ packed = true ] ;
+	repeated int32						m_int32 = 2;
+	repeated sint32						m_sint32 = 3	[ packed = true ] ;
+	repeated uint32						m_uint32 = 4	[ packed = true];
+	repeated int64						m_int64 = 5		[packed = true ];
+	repeated sint64						m_sint64 = 6;
+	repeated uint64						m_uint64 = 7	[ packed= true ];
+	repeated float						m_float = 8;
+	repeated double						m_double = 9	[packed=true];
+	repeated common.proto1.EnumTest		m_enum = 10		[ packed =true ];
+	repeated string						m_string = 11;
+}
+
+message MsgTestSet
+{
+	set<int32>	m_int32 = 1		[ packed = true ] ;
+	set<sint32>	m_sint32 = 2;
+	set<uint32>	m_uint32 = 3	[ packed = true];
+	set<int64>	m_int64 = 4		[ packed=true ];
+	set<sint64> m_sint64 = 5	[packed = true ];
+	set<uint64> m_uint64 = 6;
+	set<string>	m_string = 7	[ packed= true ];
+}
+
+message MsgTestMap
+{
+	map<int32, bool>      					m_int32bool = 1		[ packed = true ] ;
+	map<sint32, bool>						m_sint32bool = 2;
+	map<uint32, bool>						m_uint32bool = 3	[ packed = true];
+	map<int64, bool>						m_int64bool = 4		[ packed=true ];
+	map<sint64, bool>						m_sint64bool = 5	[packed = true ];
+	map<uint64, bool>						m_uint64bool = 6;
+	map<string, bool>						m_stringbool = 7	[ packed= true ];
+	map<int32, int32>						m_int32int32 = 8	[ packed = true ] ;
+	map<sint32, int32>						m_sint32int32 = 9;
+	map<uint32, int32>						m_uint32int32 = 10	[ packed = true];
+	map<int64, int32>						m_int64int32 = 11	[ packed=true ];
+	map<sint64, int32>						m_sint64int32 = 12	[packed = true ];
+	map<uint64, int32>						m_uint64int32 = 13;
+	map<string, int32>						m_stringint32 = 14	[ packed= true ];
+	map<int32, sint32>						m_int32sint32 = 15	[ packed = true ] ;
+	map<sint32, sint32>						m_sint32sint32 = 16;
+	map<uint32, sint32>						m_uint32sint32 = 17	[ packed = true];
+	map<int64, sint32>						m_int64sint32 = 18	[ packed=true ];
+	map<sint64, sint32>						m_sint64sint32 = 19	[packed = true ];
+	map<uint64, sint32>						m_uint64sint32 = 20;
+	map<string, sint32>						m_stringsint32 = 21	[ packed= true ];
+	map<int32, uint32>						m_int32uint32 = 22	[ packed = true ] ;
+	map<sint32, uint32>						m_sint32uint32 = 23;
+	map<uint32, uint32>						m_uint32uint32 = 24	[ packed = true];
+	map<int64, uint32>						m_int64uint32 = 25	[ packed=true ];
+	map<sint64, uint32>						m_sint64uint32 = 26	[packed = true ];
+	map<uint64, uint32>						m_uint64uint32 = 27;
+	map<string, uint32>						m_stringuint32 = 28	[ packed= true ];
+	map<int32, int64>						m_int32int64 = 29	[ packed = true ] ;
+	map<sint32, int64>						m_sint32int64 = 30;
+	map<uint32, int64>						m_uint32int64 = 31	[ packed = true];
+	map<int64, int64>						m_int64int64 = 32	[ packed=true ];
+	map<sint64, int64>						m_sint64int64 = 33	[packed = true ];
+	map<uint64, int64>						m_uint64int64 = 34;
+	map<string, int64>						m_stringint64 = 35	[ packed= true ];
+	map<int32, sint64>						m_int32sint64 = 36	[ packed = true ] ;
+	map<sint32, sint64>						m_sint32sint64 = 37;
+	map<uint32, sint64>						m_uint32sint64 = 38	[ packed = true];
+	map<int64, sint64>						m_int64sint64 = 39	[ packed=true ];
+	map<sint64, sint64>						m_sint64sint64 = 40	[packed = true ];
+	map<uint64, sint64>						m_uint64sint64 = 41;
+	map<string, sint64>						m_stringsint64 = 42	[ packed= true ];
+	map<int32, uint64>						m_int32uint64 = 43	[ packed = true ] ;
+	map<sint32, uint64>						m_sint32uint64 = 44;
+	map<uint32, uint64>						m_uint32uint64 = 45	[ packed = true];
+	map<int64, uint64>						m_int64uint64 = 46	[ packed=true ];
+	map<sint64, uint64>						m_sint64uint64 = 47	[packed = true ];
+	map<uint64, uint64>						m_uint64uint64 = 48;
+	map<string, uint64>						m_stringuint64 = 49	[ packed= true ];
+	map<int32, float>						m_int32float = 50	[ packed = true ] ;
+	map<sint32, float>						m_sint32float = 51;
+	map<uint32, float>						m_uint32float = 52	[ packed = true];
+	map<int64, float>						m_int64float = 53	[ packed=true ];
+	map<sint64, float>						m_sint64float = 54	[packed = true ];
+	map<uint64, float>						m_uint64float = 55;
+	map<string, float>						m_stringfloat = 56	[ packed= true ];
+	map<int32, double>						m_int32double = 57	[ packed = true ] ;
+	map<sint32, double>						m_sint32double = 58;
+	map<uint32, double>						m_uint32double = 59	[ packed = true];
+	map<int64, double>						m_int64double = 60	[ packed=true ];
+	map<sint64, double>						m_sint64double = 61	[packed = true ];
+	map<uint64, double>						m_uint64double = 62;
+	map<string, double>						m_stringdouble = 63	[ packed= true ];
+	map<int32, common.proto1.EnumTest>		m_int32enum = 64	[ packed = true ] ;
+	map<sint32, common.proto1.EnumTest>		m_sint32enum = 65;
+	map<uint32, common.proto1.EnumTest>		m_uint32enum = 66	[ packed = true];
+	map<int64, common.proto1.EnumTest>		m_int64enum = 67	[ packed=true ];
+	map<sint64, common.proto1.EnumTest>		m_sint64enum = 68	[packed = true ];
+	map<uint64, common.proto1.EnumTest>		m_uint64enum = 69;
+	map<string, common.proto1.EnumTest>		m_stringenum = 70	[ packed= true ];
+	map<int32, string>						m_int32string = 71	[ packed = true ] ;
+	map<sint32, string>						m_sint32string = 72;
+	map<uint32, string>						m_uint32string = 73	[ packed = true];
+	map<int64, string>						m_int64string = 74	[ packed=true ];
+	map<sint64, string>						m_sint64string = 75	[packed = true ];
+	map<uint64, string>						m_uint64string = 76;
+	map<string, string>						m_stringstring = 77	[ packed= true ];
+}
+
+message MsgTest
+{
+	required	common.proto1.MsgTestSingular	m_testsingular = 1;
+	repeated	common.proto1.MsgTestSingular	m_testsingular_array = 2;
+	map<int32, common.proto1.MsgTestSingular>	m_testsingular_map = 3;
+	
+	optional	MsgTestArray					m_testarray = 4;
+	repeated	MsgTestArray					m_testarray_array = 5;
+	map<int32, MsgTestArray>					m_testarray_map = 6;
+	
+				MsgTestSet						m_testset = 7;
+	repeated	MsgTestSet						m_testset_array = 8;
+	map<int32, MsgTestSet>						m_testset_map = 9;
+	
+				MsgTestMap						m_testmap = 10;
+	repeated	MsgTestMap						m_testmap_array = 11;
+	map<int32, MsgTestMap>						m_testmap_map = 12;
+}

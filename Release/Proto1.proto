@@ -1,0 +1,38 @@
+package common.proto1;
+
+enum EnumBase
+{
+	EnumBase_1;
+	EnumBase_2 = 100;
+	EnumBase_3 = 10 + (9 - 8) * 7 / 6 % 5 << 4 >> 3 | 2 & 1;
+}
+
+enum EnumTest
+{
+	EnumTest_1 = 0x0001;
+	EnumTest_2 = 0x0002 + EnumTest_1;
+	EnumTest_3 = 0x0003 - EnumBase.EnumBase_1;
+	EnumTest_4 = EnumTest_2 | EnumTest_3;
+	EnumTest_5;
+}
+  
+message MsgNull
+{
+
+}
+
+message MsgTestSingular
+{
+				bool		m_bool = 1;
+	optional	int32		m_int32 = 2;
+	required	sint32		m_sint32 = 3;
+	optional	uint32		m_uint32 = 4;
+	required	int64		m_int64 = 5;
+				sint64		m_sint64 = 6;
+	required	uint64		m_uint64 = 7;
+				float		m_float = 8;
+	optional	double		m_double = 9;
+	required	EnumTest	m_enum = 10;
+	optional	string		m_string = 11;
+				bytes		m_bytes = 12;
+}
