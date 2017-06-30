@@ -16,6 +16,7 @@ you can give zhe path in tool's running params.<br>
 <br>
 3. enum<br>
 in proto file, you can define enum like this:<br>
+
 ```
 enum EnumBase
 {
@@ -32,6 +33,7 @@ enum EnumTest
 	EnumTest_5; // EnumTest_4 + 1
 }
 ```
+
 you can use mathematical expression for enum's entry, and use some defined entries in expression.<br>
 you can use operator like (), +, -, *, /, %, <<, >>, |, & in expression.<br>
 you can define entry without value. if zhe entry without value is zhe first entry in the enum, it while be assign as 0. zhe others entries without value while be assign as (previous entry + 1).<br>
@@ -41,6 +43,7 @@ you can use any value for first entry, and need not be assign as 0 for it.<br>
 <br>
 4. message<br>
 in proto file, you can define message like this:<br>
+
 ```
 message MsgTest
 {
@@ -51,8 +54,10 @@ message MsgTest
 	map<uint32, EnumTest> m_uint32enum = 5 [packed = true];
 }
 ```
+
 you can use optional/required for singular field, or not. zhe code/decode rules are all the same.<br>
 you can use repeated/set/map for container field. repeated and set's code/decode rules are all the same. map's element is zhe same as nested message like this:<br>
+
 ```
 message pair
 {
@@ -60,11 +65,13 @@ message pair
 	V value = 2;
 }
 ```
+
 you can declare "packed = true" for any container fields.<br>
 miniproto code/decode rule is zhe same as protobuf. all of protobuf2.0 and 3.0's rules are supported. you can give version in tool's running params.<br>
 <br>
 4-1. message code for c++<br>
 Eg. zhe message MsgTest's code:<br>
+
 ```cpp
 template <template<typename> class A = std::allocator> 
 class MsgTest : public common::miniproto::ProtoBase 
@@ -172,6 +179,7 @@ private:
 	common::miniproto::ProtoBitMap<5> m_bits; 
 };
 ```
+
 it is used stl container for repeated/set/map, and you can set allocator by yourself. so you can control memory malloc and free enjoy yourself.<br>
 it has Release interface for free and Clear interface for clear. so you can Clear repeated field but not free, and Release it for free memory.<br>
 it is support right-value operator, and you need build it by c++11.<br>
