@@ -240,6 +240,7 @@ you can reserve repeated field by reserve interface for realloc memory.<br>
 
 ## 7.solusion tree
 
+```
 MiniProto ─┬─ MiniProto ───────────┬─ logic ─────┬─ ProtoParse.h/ProtoParse.cpp<br>
            │                       │             └─ ProtoCodeTool.h/ProtoCodeTool.cpp<br>
            │                       ├─ tool ──────┬─ StringTool.h/StringTool.cpp<br>
@@ -298,7 +299,8 @@ MiniProto ─┬─ MiniProto ───────────┬─ logic ─�
            ├─ Clean.bat<br>
 	   ├─ readme.txt<br>
 	   └─ Tools.sln<br>
-	   
+```
+
 ## 8.build
 
 MiniProto is a c++ project creat by vs2013. <br>
