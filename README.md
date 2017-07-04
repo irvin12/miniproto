@@ -303,21 +303,21 @@ MiniProto ─┬─ MiniProto ───────────┬─ logic ─�
 
 ## 8.build
 
-MiniProto is a c++ project creat by vs2013. <br>
+MiniProto is a c++ project created by vs2013. <br>
 it is depend on boost.spirit lib to parse proto file. so you need configure you boost path for this project. <br>
 
-MiniProtoCppLib is a c++ project creat by vs2013. <br>
+MiniProtoCppLib is a c++ project created by vs2013. <br>
 you can build it without any third-party libraries to make 'libminiproto.lib' file. <br>
-MiniProtoCppTest is an Eg. project creat by vs2013. <br>
+MiniProtoCppTest is an Eg. project created by vs2013. <br>
 it is show you how to use zhe lib and cpp message codes in your project. <br>
 
-MiniProtoCSharpDll is a c# project creat by vs2013. <br>
+MiniProtoCSharpDll is a c# project created by vs2013. <br>
 you can build it to make 'dllminiproto.dll' file. <br>
-MiniProtoCSharpTest is an Eg. project creat by vs2013. <br>
+MiniProtoCSharpTest is an Eg. project created by vs2013. <br>
 it is show you how to use zhe dll and c# message codes in your project. <br>
 
-MiniProtoJavaJar is a java project creat by myeclipse. <br>
+MiniProtoJavaJar is a java project created by myeclipse. <br>
 you can export from it to get a 'miniproto.jar' file. <br>
-MiniProtoJavaTest is an Eg. project creat by myeclipse. <br>
+MiniProtoJavaTest is an Eg. project created by myeclipse. <br>
 it is show you how to use zhe jar and java message codes in your project. <br>
 
