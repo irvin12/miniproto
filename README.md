@@ -241,64 +241,64 @@ you can reserve repeated field by reserve interface for realloc memory.<br>
 ## 7.solusion tree
 
 ```
-MiniProto ─┬─ MiniProto ───────────┬─ logic ─────┬─ ProtoParse.h/ProtoParse.cpp<br>
-           │                       │             └─ ProtoCodeTool.h/ProtoCodeTool.cpp<br>
-           │                       ├─ tool ──────┬─ StringTool.h/StringTool.cpp<br>
-           │                       │             └─ FileData.h/FileData.cpp<br>
-           │                       ├─ MiniProto.cpp<br>
-           │                       └─ MiniProto.vcxproj<br>
-           │ <br>
-           ├─ MiniProtoCppLib ─────┬─ miniproto ─┬─ ProtoDefine.h<br>
-           │                       │             ├─ ProtoBase.h/ProtoBase.cpp<br>
-           │                       │             ├─ ProtoTool.h/ProtoTool.cpp<br>
-           │                       │             └─ ProtoBitMap.h<br>
-           │                       └─ MiniProtoCppLib.vcxproj<br>
-           │ <br>
-           ├─ MiniProtoCppTest ────┬─ message ───┬─ Proto1.h<br>
-           │                       │             └─ Proto2.h<br>
-           │                       ├─ MiniProtoCppTest.cpp<br>
-           │                       └─ MiniProtoCppTest.vcxproj<br>
-           │ <br>
-           ├─ MiniProtoCSharpDll ──┬─ miniproto ─┬─ ProtoDefine.cs<br>
-           │                       │             ├─ ProtoBase.cs<br>
-           │                       │             ├─ ProtoTool.cs<br>
-           │                       │             └─ ProtoBitMap.cs<br>
-           │                       ├─ Properties ── AssemblyInfo.cs<br>
-           │                       └─ MiniProtoCSharpDll.csproj<br>
-           │ <br>
-           ├─ MiniProtoCSharpTest ─┬─ message ───┬─ Proto1.cs<br>
-           │                       │             └─ Proto2.cs<br>
-           │                       ├─ Program.cpp<br>
-           │                       ├─ App.config<br>
-           │                       ├─ Properties ── AssemblyInfo.cs<br>
-           │                       └─ MiniProtoCSharpTest.csproj<br>
-           │ <br>
-           ├─ MiniProtoJavaJar ────┬─ src ──────── common ─── miniproto ─┬─ ProtoDefine.java<br>
-           │                       │                                     ├─ ProtoBase.java<br>
-           │                       │                                     ├─ ProtoTool.java<br>
-           │                       │                                     └─ ProtoBitMap.java<br>
-           │                       ├─ .settings<br>
-           │                       ├─ .classpath<br>
-           │                       └─ .project<br>
-           │ <br>
-           ├─ MiniProtoJavaTest ───┬─ src ──────┬─ common ─┬─ proto1 ────── Proto1.java<br>
-           │                       │            │          └─ proto2 ────── Proto2.java<br>
-           │                       │            └─ MiniProtoJavaTest.java<br>
-           │                       ├─ .settings<br>
-           │                       ├─ .classpath<br>
-           │                       └─ .project<br>
-           │ <br>
-           ├─ Release ─────────────┬─ Proto1.proto<br>
-           │                       ├─ Proto2.proto<br>
-           │                       ├─ libminiproto.lib<br>
-           │                       ├─ dllminiproto.dll<br>
-           │                       ├─ miniproto.jar<br>
-           │                       ├─ MiniProto.exe<br>
-           │                       └─ MiniProto.bat<br>
-           │ <br>
-           ├─ Clean.bat<br>
-	   ├─ readme.txt<br>
-	   └─ Tools.sln<br>
+MiniProto ─┬─ MiniProto ───────────┬─ logic ─────┬─ ProtoParse.h/ProtoParse.cpp
+           │                       │             └─ ProtoCodeTool.h/ProtoCodeTool.cpp
+           │                       ├─ tool ──────┬─ StringTool.h/StringTool.cpp
+           │                       │             └─ FileData.h/FileData.cpp
+           │                       ├─ MiniProto.cpp
+           │                       └─ MiniProto.vcxproj
+           │ 
+           ├─ MiniProtoCppLib ─────┬─ miniproto ─┬─ ProtoDefine.h
+           │                       │             ├─ ProtoBase.h/ProtoBase.cpp
+           │                       │             ├─ ProtoTool.h/ProtoTool.cpp
+           │                       │             └─ ProtoBitMap.h
+           │                       └─ MiniProtoCppLib.vcxproj
+           │ 
+           ├─ MiniProtoCppTest ────┬─ message ───┬─ Proto1.h
+           │                       │             └─ Proto2.h
+           │                       ├─ MiniProtoCppTest.cpp
+           │                       └─ MiniProtoCppTest.vcxproj
+           │ 
+           ├─ MiniProtoCSharpDll ──┬─ miniproto ─┬─ ProtoDefine.cs
+           │                       │             ├─ ProtoBase.cs
+           │                       │             ├─ ProtoTool.cs
+           │                       │             └─ ProtoBitMap.cs
+           │                       ├─ Properties ── AssemblyInfo.cs
+           │                       └─ MiniProtoCSharpDll.csproj
+           │ 
+           ├─ MiniProtoCSharpTest ─┬─ message ───┬─ Proto1.cs
+           │                       │             └─ Proto2.cs
+           │                       ├─ Program.cpp
+           │                       ├─ App.config
+           │                       ├─ Properties ── AssemblyInfo.cs
+           │                       └─ MiniProtoCSharpTest.csproj
+           │ 
+           ├─ MiniProtoJavaJar ────┬─ src ──────── common ─── miniproto ─┬─ ProtoDefine.java
+           │                       │                                     ├─ ProtoBase.java
+           │                       │                                     ├─ ProtoTool.java
+           │                       │                                     └─ ProtoBitMap.java
+           │                       ├─ .settings
+           │                       ├─ .classpath
+           │                       └─ .project
+           │ 
+           ├─ MiniProtoJavaTest ───┬─ src ──────┬─ common ─┬─ proto1 ────── Proto1.java
+           │                       │            │          └─ proto2 ────── Proto2.java
+           │                       │            └─ MiniProtoJavaTest.java
+           │                       ├─ .settings
+           │                       ├─ .classpath
+           │                       └─ .project
+           │ 
+           ├─ Release ─────────────┬─ Proto1.proto
+           │                       ├─ Proto2.proto
+           │                       ├─ libminiproto.lib
+           │                       ├─ dllminiproto.dll
+           │                       ├─ miniproto.jar
+           │                       ├─ MiniProto.exe
+           │                       └─ MiniProto.bat
+           │ 
+           ├─ Clean.bat
+	   ├─ readme.txt
+	   └─ Tools.sln
 ```
 
 ## 8.build
