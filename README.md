@@ -237,3 +237,85 @@ it has Release interface for free and Clear interface for clear. so you can Clea
 it is support right-value operator, and you need build it by c++11.<br>
 you can traversed repeated field by index, and traversed set/map by begin/end interface.<br>
 you can reserve repeated field by reserve interface for realloc memory.<br>
+
+## 7.solusion tree
+
+MiniProto ─┬─ MiniProto ───────────┬─ logic ─────┬─ ProtoParse.h/ProtoParse.cpp<br>
+           │                       │             └─ ProtoCodeTool.h/ProtoCodeTool.cpp<br>
+           │                       ├─ tool ──────┬─ StringTool.h/StringTool.cpp<br>
+           │                       │             └─ FileData.h/FileData.cpp<br>
+           │                       ├─ MiniProto.cpp<br>
+           │                       └─ MiniProto.vcxproj<br>
+           │ <br>
+           ├─ MiniProtoCppLib ─────┬─ miniproto ─┬─ ProtoDefine.h<br>
+           │                       │             ├─ ProtoBase.h/ProtoBase.cpp<br>
+           │                       │             ├─ ProtoTool.h/ProtoTool.cpp<br>
+           │                       │             └─ ProtoBitMap.h<br>
+           │                       └─ MiniProtoCppLib.vcxproj<br>
+           │ <br>
+           ├─ MiniProtoCppTest ────┬─ message ───┬─ Proto1.h<br>
+           │                       │             └─ Proto2.h<br>
+           │                       ├─ MiniProtoCppTest.cpp<br>
+           │                       └─ MiniProtoCppTest.vcxproj<br>
+           │ <br>
+           ├─ MiniProtoCSharpDll ──┬─ miniproto ─┬─ ProtoDefine.cs<br>
+           │                       │             ├─ ProtoBase.cs<br>
+           │                       │             ├─ ProtoTool.cs<br>
+           │                       │             └─ ProtoBitMap.cs<br>
+           │                       ├─ Properties ── AssemblyInfo.cs<br>
+           │                       └─ MiniProtoCSharpDll.csproj<br>
+           │ <br>
+           ├─ MiniProtoCSharpTest ─┬─ message ───┬─ Proto1.cs<br>
+           │                       │             └─ Proto2.cs<br>
+           │                       ├─ Program.cpp<br>
+           │                       ├─ App.config<br>
+           │                       ├─ Properties ── AssemblyInfo.cs<br>
+           │                       └─ MiniProtoCSharpTest.csproj<br>
+           │ <br>
+           ├─ MiniProtoJavaJar ────┬─ src ──────── common ─── miniproto ─┬─ ProtoDefine.java<br>
+           │                       │                                     ├─ ProtoBase.java<br>
+           │                       │                                     ├─ ProtoTool.java<br>
+           │                       │                                     └─ ProtoBitMap.java<br>
+           │                       ├─ .settings<br>
+           │                       ├─ .classpath<br>
+           │                       └─ .project<br>
+           │ <br>
+           ├─ MiniProtoJavaTest ───┬─ src ──────┬─ common ─┬─ proto1 ────── Proto1.java<br>
+           │                       │            │          └─ proto2 ────── Proto2.java<br>
+           │                       │            └─ MiniProtoJavaTest.java<br>
+           │                       ├─ .settings<br>
+           │                       ├─ .classpath<br>
+           │                       └─ .project<br>
+           │ <br>
+           ├─ Release ─────────────┬─ Proto1.proto<br>
+           │                       ├─ Proto2.proto<br>
+           │                       ├─ libminiproto.lib<br>
+           │                       ├─ dllminiproto.dll<br>
+           │                       ├─ miniproto.jar<br>
+           │                       ├─ MiniProto.exe<br>
+           │                       └─ MiniProto.bat<br>
+           │ <br>
+           ├─ Clean.bat<br>
+	   ├─ readme.txt<br>
+	   └─ Tools.sln<br>
+	   
+## 8.build
+
+MiniProto is a c++ project creat by vs2013. <br>
+it is depend on boost.spirit lib to parse proto file. so you need configure you boost path for this project. <br>
+
+MiniProtoCppLib is a c++ project creat by vs2013. <br>
+you can build it without any third-party libraries to make 'libminiproto.lib' file. <br>
+MiniProtoCppTest is an Eg. project creat by vs2013. <br>
+it is show you how to use zhe lib and cpp message codes in your project. <br>
+
+MiniProtoCSharpDll is a c# project creat by vs2013. <br>
+you can build it to make 'dllminiproto.dll' file. <br>
+MiniProtoCSharpTest is an Eg. project creat by vs2013. <br>
+it is show you how to use zhe dll and c# message codes in your project. <br>
+
+MiniProtoJavaJar is a java project creat by myeclipse. <br>
+you can export from it to get a 'miniproto.jar' file. <br>
+MiniProtoJavaTest is an Eg. project creat by myeclipse. <br>
+it is show you how to use zhe jar and java message codes in your project. <br>
+
