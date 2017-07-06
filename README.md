@@ -89,11 +89,11 @@ message A
 }
 ```
 
-miniproto code/decode rules are all zhe same as protobuf. <br>
+miniproto code/decode rules are all the same as protobuf. <br>
 all of protobuf2.0 and 3.0's rules are supported. <br>
 you can give version in tool's running params.<br>
 set field's code/decode rule is the same as repeated field. <br>
-map's element is zhe same as nested message like this:<br>
+map's element is the same as nested message like this:<br>
 
 ```
 message pair
@@ -122,7 +122,7 @@ you can give target path like 'java_path=D:/code/java' if you want autogeneratio
 
 ## 6. message code for c++
 
-Eg. zhe message MsgTest's code:<br>
+Eg. the message MsgTest's code:<br>
 
 ```cpp
 template <template<typename> class A = std::allocator> 
@@ -309,15 +309,15 @@ it is depend on boost.spirit lib to parse proto file. so you need configure your
 MiniProtoCppLib is a c++ project created by vs2013. <br>
 you can build it without any third-party libraries to make 'libminiproto.lib' file. <br>
 MiniProtoCppTest is an Eg. project created by vs2013. <br>
-it is show you how to use zhe lib and cpp message codes in your project. <br>
+it is show you how to use the lib and cpp message codes in your project. <br>
 
 MiniProtoCSharpDll is a c# project created by vs2013. <br>
 you can build it to make 'dllminiproto.dll' file. <br>
 MiniProtoCSharpTest is an Eg. project created by vs2013. <br>
-it is show you how to use zhe dll and c# message codes in your project. <br>
+it is show you how to use the dll and c# message codes in your project. <br>
 
 MiniProtoJavaJar is a java project created by myeclipse. <br>
 you can export from it to get a 'miniproto.jar' file. <br>
 MiniProtoJavaTest is an Eg. project created by myeclipse. <br>
-it is show you how to use zhe jar and java message codes in your project. <br>
+it is show you how to use the jar and java message codes in your project. <br>
 
