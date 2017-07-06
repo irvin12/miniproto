@@ -4,7 +4,7 @@ mini proto tool like google protobuf. parse 'xx.proto' files to cpp/c#/java code
 
 ## 1. package
 
-it is zhe same as protobuf, you can declare package like this:<br>
+it is the same as protobuf, you can declare package like this:<br>
 
 ```
 package xxx.xxx.xxx;
@@ -12,14 +12,14 @@ package xxx.xxx.xxx;
 
 ## 2. import
 
-it is zhe same as protobuf, you can declare import like this:<br>
+it is the same as protobuf, you can declare import like this:<br>
 
 ```
 import "xxx.proto";
 ```
 
 the import filename is unsupport with filepath.<br>
-you can give zhe path in tool's running params.<br>
+you can give the path in tool's running params.<br>
 
 ## 3. enum
 
@@ -44,7 +44,7 @@ enum EnumTest
 
 you can use mathematical expression as enum's value, and use some declared entries in expression.<br>
 you can use operator like (), +, -, *, /, %, <<, >>, |, & in expression.<br>
-you can declare entry without value. if zhe entry without value is zhe first entry in the enum, it while be assign as 0. zhe others entries without value while be assign as (previous entry + 1).<br>
+you can declare entry without value. if the entry without value is the first entry in the enum, it while be assign as 0. the others entries without value while be assign as (previous entry + 1).<br>
 you can use same values to assign to different entries, and need not declare "allow_alias = true" like protobuf.<br>
 you can use any value as first entry, and need not be assign as 0 for it.<br>
 
