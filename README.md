@@ -304,7 +304,7 @@ MiniProto ─┬─ MiniProto ───────────┬─ logic ─�
 ## 8.build
 
 MiniProto is a c++ project created by vs2013. <br>
-it is depend on boost.spirit lib to parse proto file. so you need configure you boost path for this project. <br>
+it is depend on boost.spirit lib to parse proto file. so you need configure your boost path for this project. <br>
 
 MiniProtoCppLib is a c++ project created by vs2013. <br>
 you can build it without any third-party libraries to make 'libminiproto.lib' file. <br>
