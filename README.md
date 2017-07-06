@@ -1,6 +1,6 @@
 # miniproto
 
-mini proto tool like google protobuf. parse 'xx.proto' files to cpp/c#/java code.<br>
+mini proto tool like google protobuf. parse 'xx.proto' files to autogeneration cpp/c#/java code.<br>
 
 ## 1. package
 
