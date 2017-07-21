@@ -70,7 +70,7 @@ you can use bool/int32/sint32/uint32/int64/sint64/uint64/float/double/enum/strin
 you can use int32/sint32/uint32/int64/sint64/uint64/string as set's element and map's key.<br>
 you can declare 'packed = true' for container fields.<br>
 <br>
-unsupports list: <br>
+unsupport list: <br>
 you can not declare default value for any fields.<br>
 you can not declare deprecated field.<br>
 you can not declare extensions field.<br>
